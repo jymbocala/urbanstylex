@@ -18,9 +18,10 @@ const ShoppingList = () => {
   // get data from strapi database
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image", // '?populate=image' gets images from each of the items along with the items data
+      "https://patient-champion-f059357f05.strapiapp.com/api/items?populate=image", // '?populate=image' gets images from each of the items along with the items data
       { method: "GET" }
     );
+    console.log(items, "ITEMS ITEMS");
     const itemsJson = await items.json();
     dispatch(setItems(itemsJson.data));
   }

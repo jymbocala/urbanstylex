@@ -23,7 +23,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
+      `https://patient-champion-f059357f05.strapiapp.com/api/items/${itemId}?populate=image`,
       { method: "GET" }
     );
     const itemJson = await item.json();
@@ -32,7 +32,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image", // '?populate=image' gets images from each of the items along with the items data
+      "https://patient-champion-f059357f05.strapiapp.com/api/items?populate=image", // '?populate=image' gets images from each of the items along with the items data
       { method: "GET" }
     );
     const itemsJson = await items.json();
@@ -57,7 +57,7 @@ const ItemDetails = () => {
           <Box flex="1 1 40%" mb="40px">
             <img
               alt={item?.name}
-              src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+              src={`https://patient-champion-f059357f05.strapiapp.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
               width="100%"
               height="100%"
               style={{

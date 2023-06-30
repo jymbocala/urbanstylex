@@ -137,7 +137,7 @@ const Checkout = () => {
     };
 
     // Send a POST request to create the order
-    const response = await fetch("http://localhost:1337/api/orders", {
+    const response = await fetch("https://patient-champion-f059357f05.strapiapp.com/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
