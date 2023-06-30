@@ -21,8 +21,8 @@ const ShoppingList = () => {
       "https://patient-champion-f059357f05.strapiapp.com/api/items?populate=image", // '?populate=image' gets images from each of the items along with the items data
       { method: "GET" }
     );
-    console.log(items, "ITEMS ITEMS");
     const itemsJson = await items.json();
+    // console.log(itemsJson.data, "ITEMS ITEMS");
     dispatch(setItems(itemsJson.data));
   }
 

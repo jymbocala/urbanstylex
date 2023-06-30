@@ -71,7 +71,7 @@ const CartMenu = () => {
                       alt={item?.name}
                       width="123px"
                       height="164px"
-                      src={`https://patient-champion-f059357f05.strapiapp.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                      src={`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                     />
                   </Box>
                   <Box flex="1 1 60%">
